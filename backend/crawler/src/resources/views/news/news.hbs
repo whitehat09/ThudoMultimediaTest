@@ -1,0 +1,30 @@
+<dic class=" container mt-4">
+  <div class="row">
+    {{#each news}}
+    <div class="col-sm-6 col-lg-4">
+      <div class="card card-course-item">
+        <a>
+          <img class="card-img-top" src="{{this.image}}" alt="{{this.title}}">
+        </a>
+        <div class="card-body">
+          <a>
+            <h5 class="card-title">{{this.title}}</h5>
+          </a>
+
+          <p class="card-text">{{this.content}}</p>
+
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <form method="POST" action="/news/dantri">
+    <div class="form-group">
+      <label for="upData">Tải dữ liệu vào data</label>
+      <textarea class="form-control" id="upData" name="upData"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Thêm dữ liệu
+    </button>
+  </form>
+</dic>
